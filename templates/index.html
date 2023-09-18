@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+  <h1>Airplane flights </h1>
+
+ <div class="login">
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <input type="text" name="Month" placeholder="Month" required="required" />
+    <input type="text" name="Day" placeholder="Day" required="required" />
+		<input type="text" name="Departure_time" placeholder="Departure_time" required="required" />
+		<input type="text" name="Arrival_time" placeholder="Arrival_time" required="required" />
+		<input type="text" name="Flight" placeholder="Flight" required="required" />
+		<input type="text" name="Distance" placeholder="Distance" required="required" />
+		<input type="text" name="Actual_departure_time" placeholder="Actual_departure_time" required="required" />
+		<input type="text" name="Flight_duration" placeholder="Flight_duration" required="required" />
+		<input type="text" name="Flight_departure_delay" placeholder="Flight_departure_delay" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <p class="prediction-text">{{ prediction_text }}</p> <!-- Wrapped in a <p> tag with a class for styling -->
+
+ </div>
+
+
+</body>
+</html>
+

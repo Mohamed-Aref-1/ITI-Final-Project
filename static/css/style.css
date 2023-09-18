@@ -1,0 +1,206 @@
+/* Reset some default styles */
+body, h1, form {
+	margin: 0;
+	padding: 0;
+}
+
+/* Apply styles to the body */
+body {
+	background: url('Capture.PNG') center/cover repeat; /* Replace 'background-image.jpg' with your actual background image URL */
+	font-family: 'Arimo', sans-serif;
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column; /* Change to column */
+	justify-content: flex-start;
+	align-items: center; /* Center horizontally */
+	height: 100vh;
+    background-position: center; /* Adjust this value as needed */
+    background-size: 1230px 670px; /* Width: 300 pixels, Height: 200 pixels */
+
+
+}
+
+/* Style the login container */
+.login {
+
+    width: 491px;
+    margin-top: 0px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 19px;
+    margin-right: -474px;
+}
+
+/* Style the heading */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: -13px;
+    margin-left: 486px;
+    width: 479px;
+    text-align: center;
+}
+
+/* Style the form elements */
+.login form input[type="text"] {
+    width: 95%;
+    margin-top: 1px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 5px;
+}
+/* Style the submit button */
+.login form button {
+	width: 100%;
+	padding: 9px; /* Adjust padding */
+	margin-top: 10px; /* Adjust margin-top */
+	background: #3498db;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.login form button:hover {
+	background: #2980b9;
+}
+
+/* Style the prediction text */
+.login p {
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+    margin-bottom: -3px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+	.login {
+		width: 80%;
+	}
+}
+/* Your existing CSS styles */
+/* ... */
+
+/* Add keyframes for color change and vertical movement */
+@keyframes changeColorAndMove {
+    0%, 100% { 
+        color: #FF5733; 
+        transform: translateY(0); /* Start and end position */
+    }
+    20%, 80% { 
+        color: #33FF63; 
+        transform: translateY(-2px); /* Move up by 2px */
+    }
+    40%, 60% { 
+        color: #3363FF; 
+        transform: translateY(2px); /* Move down by 2px */
+    }
+}
+
+/* Apply animation to the text */
+#color-changing-text {
+    animation: changeColorAndMove 10s infinite;
+}
+
+/* Your existing CSS styles */
+/* ... */
+
+/* Add keyframes for color change and vertical movement */
+@keyframes changeColorAndMove {
+    0%, 100% { 
+        color: #ffffff; 
+        transform: translateY(0); /* Start and end position */
+    }
+    20%, 80% { 
+        color: #202020; 
+        transform: translateY(-4px); /* Move up by 4px */
+    }
+    40%, 60% { 
+        color: #9701ab; 
+        transform: translateY(4px); /* Move down by 4px */
+    }
+}
+
+/* Apply animation to the text */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: changeColorAndMove 6s infinite; /* Faster animation */
+    position: relative; /* Added for positioning the pseudo-element */
+}
+
+/* Add background box with border radius and custom color */
+h1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -13px;
+    width: calc(101% + 4px);
+    height: calc(100% + 4px);
+    background-color: #3498db;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+
+/* Your existing CSS styles */
+/* ... */
+
+/* Style the prediction text */
+.login p.prediction-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+/* Your existing CSS styles */
+/* ... */
+
+/* Add keyframes for color change and vertical movement */
+@keyframes changeColorAndMove {
+    0%, 100% { 
+        color: #ffffff; 
+        transform: translateY(0); /* Start and end position */
+    }
+    20%, 80% { 
+        color: #ffffff; 
+        transform: translateY(0px); /* Move up by 4px */
+    }
+    40%, 60% { 
+        color: #ffffff; 
+        transform: translateY(0px); /* Move down by 4px */
+    }
+}
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 2px;
+    margin-top: 20px; /* Adjust margin-top to move it down */
+    animation: changeColorAndMove 6s infinite;
+    position: relative;
+    border-radius: 15px; /* Add border radius */
+    padding: 10px; /* Add padding for spacing */
+}
+/* Rest of your CSS */
+/* ... */
+
+
+.login p.prediction-text {
+    margin-top: -35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
